@@ -1,0 +1,7 @@
+#Sun May 10 16:27:52 ART 2020
+base.0=C\:\\Users\\cristian\\Desktop\\aplicaciones en adroid\\appNumeroSecreto\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=C\:\\Users\\cristian\\Desktop\\aplicaciones en adroid\\appNumeroSecreto\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

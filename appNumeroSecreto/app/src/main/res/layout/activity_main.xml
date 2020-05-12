@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/NumeroIngresado"
+        android:layout_width="231dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="ingrese un mumero"
+        app:layout_constraintBottom_toTopOf="@+id/lblNumeroSecreto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblNumeroSecreto"
+        android:layout_width="230dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="40dp"
+        android:text="numero secreto"
+        app:layout_constraintBottom_toTopOf="@+id/btnVerificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NumeroIngresado" />
+
+    <Button
+        android:id="@+id/btnComenzar"
+        android:layout_width="150dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="173dp"
+        android:text="Comenzar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerificar" />
+
+    <Button
+        android:id="@+id/btnVerificar"
+        android:layout_width="150dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="173dp"
+        android:layout_marginBottom="28dp"
+        android:text="Verificar"
+        app:layout_constraintBottom_toTopOf="@+id/btnComenzar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNumeroSecreto" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="84dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="25dp"
+        android:text="intentos"
+        app:layout_constraintBottom_toTopOf="@+id/btnVerificar"
+        app:layout_constraintEnd_toStartOf="@+id/lblIntentos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNumeroSecreto" />
+
+    <EditText
+        android:id="@+id/lblIntentos"
+        android:layout_width="77dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnVerificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/lblNumeroSecreto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
