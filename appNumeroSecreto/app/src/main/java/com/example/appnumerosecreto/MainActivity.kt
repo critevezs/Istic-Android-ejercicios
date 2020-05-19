@@ -11,21 +11,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         val numeroSecreto = (Math.random() *20 ).toInt()
-        //val intentos=0
+        val intentos=0
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //textoFijo.text="Comenzando"
+       
 
         btnVerificar.setOnClickListener {
-            // textoFijo.text=txtNombre.text
 
-            //lblNumeroSecreto.text = numeroSecreto.toString()
 
 
             //intentos = intentos + 1
-           // lblIntentos.text=intentos.toString()
+
 
             if(NumeroIngresado.text.toString() <= 0.toString() )
             {
