@@ -1,11 +1,15 @@
 package com.example.appparcial
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 
 import kotlinx.android.synthetic.main.activity_numero_secreto.*
+import java.io.IOException
+import java.io.OutputStreamWriter
 
 class numeroSecreto : AppCompatActivity() {
 
@@ -14,9 +18,16 @@ class numeroSecreto : AppCompatActivity() {
     var intentos:Int = 0
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_numero_secreto)
+
+        //intento recibir datos
+        //val usuario=intent.getStringExtra("nombre")
+        //textView_usuario.text=usuario
+
 
 
         btn_volver.setOnClickListener {
@@ -25,7 +36,14 @@ class numeroSecreto : AppCompatActivity() {
             startActivity(intent4)
 
             finish()
+        }
 
+        btn_Historial_Numero.setOnClickListener {
+
+          val intent_26:Intent = Intent (this,Historial_Numero_Secreto::class.java)
+            startActivity(intent_26)
+
+            finish()
 
         }
 
@@ -69,6 +87,16 @@ class numeroSecreto : AppCompatActivity() {
                         if (numeroSecreto.toString() == editText_ingreso.text.toString()){
                             Toast.makeText(this, "sos un genio adivinaste el numero secreto", Toast.LENGTH_LONG).show()
                              textView_random.text=numeroSecreto.toString()
+
+                            try {
+                                val archivo = OutputStreamWriter(openFileOutput("datos_numero.txt", Activity.MODE_APPEND))
+                                //archivo.write(editText_Obj_Contador.text.toString() + "  " + textView_cuenta.text.toString() + "\n")
+                                archivo.write("Intentos " + intentos.toString() + "\n")
+                                archivo.flush()
+                                archivo.close()
+                            } catch (e: IOException) {
+
+                            }
                         }
                     else{
                             if (numeroSecreto.toString() > editText_ingreso.text.toString()){

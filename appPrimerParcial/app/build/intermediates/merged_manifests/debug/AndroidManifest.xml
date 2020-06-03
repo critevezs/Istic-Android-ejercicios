@@ -18,6 +18,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.appparcial.Historial_Numero_Secreto" />
+        <activity android:name="com.example.appparcial.Historial_Contador" />
+        <activity android:name="com.example.appparcial.Registro_Ok" />
+        <activity android:name="com.example.appparcial.registro" />
         <activity android:name="com.example.appparcial.instructivo_numerosecreto" />
         <activity android:name="com.example.appparcial.instructivo_contador" />
         <activity

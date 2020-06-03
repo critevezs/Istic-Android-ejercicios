@@ -10,10 +10,11 @@
         android:id="@+id/btn_reset"
         android:layout_width="117dp"
         android:layout_height="70dp"
-        android:layout_marginTop="77dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="#ED2929"
         android:text="reset"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toEndOf="@+id/btn_contar"
         app:layout_constraintTop_toBottomOf="@+id/textView_cuenta" />
 
@@ -32,7 +33,7 @@
         app:layout_constraintVertical_bias="0.097" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editText_Obj_Contador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
@@ -53,13 +54,13 @@
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_Obj_Contador" />
 
     <Button
         android:id="@+id/btn_contar"
         android:layout_width="117dp"
         android:layout_height="70dp"
-        android:layout_marginTop="77dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="#31D138"
         android:text="contar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,10 +72,32 @@
         android:id="@+id/btn_volver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="125dp"
         android:text="volver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_contar" />
+
+    <Button
+        android:id="@+id/btn_historial_contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="Historial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toEndOf="@+id/btn_volver"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reset" />
+
+    <Button
+        android:id="@+id/btn_Guardar_Contador"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="27dp"
+        android:backgroundTint="#FFEB3B"
+        android:text="GUARDAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reset" />
 </androidx.constraintlayout.widget.ConstraintLayout>

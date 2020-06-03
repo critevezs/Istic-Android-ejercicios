@@ -12,6 +12,10 @@
         "source": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\src\\main\\res\\layout\\activity_instructivo_numerosecreto.xml"
     },
     {
+        "merged": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registro.xml.flat",
+        "source": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\src\\main\\res\\layout\\activity_registro.xml"
+    },
+    {
         "merged": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
@@ -30,6 +34,10 @@
     {
         "merged": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash_screen.xml.flat",
         "source": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_historial__contador.xml.flat",
+        "source": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\src\\main\\res\\layout\\activity_historial__contador.xml"
     },
     {
         "merged": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
@@ -60,6 +68,14 @@
         "source": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registro__ok.xml.flat",
+        "source": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\src\\main\\res\\layout\\activity_registro__ok.xml"
+    },
+    {
+        "merged": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_historial__numero__secreto.xml.flat",
+        "source": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\src\\main\\res\\layout\\activity_historial__numero__secreto.xml"
+    },
+    {
         "merged": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\build\\intermediates\\res\\merged\\debug\\drawable_senorx.jpg.flat",
         "source": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\src\\main\\res\\drawable\\senorx.jpg"
     },
@@ -82,6 +98,10 @@
     {
         "merged": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\build\\intermediates\\res\\merged\\debug\\drawable_registro_exitoso.png.flat",
+        "source": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\src\\main\\res\\drawable\\registro_exitoso.png"
     },
     {
         "merged": "C:\\Users\\cristian\\Desktop\\appPrimerParcial\\app\\build\\intermediates\\res\\merged\\debug\\drawable_numerosecreto_1.jpg.flat",
