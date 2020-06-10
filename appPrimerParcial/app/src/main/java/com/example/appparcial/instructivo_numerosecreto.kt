@@ -11,10 +11,14 @@ class instructivo_numerosecreto : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_instructivo_numerosecreto)
 
+        val usuario_4=intent.getStringExtra("nombre_3");
+
 
         btn_comenzar.setOnClickListener {
 
-           val intent9: Intent = Intent (this, numeroSecreto::class.java)
+            val Usuario_Logueado_4 = usuario_4
+            val intent9: Intent = Intent (this, numeroSecreto::class.java)
+            intent9.putExtra("nombre_4", Usuario_Logueado_4)
             startActivity(intent9)
 
             finish()

@@ -12,10 +12,10 @@ class juegos : AppCompatActivity() {
         setContentView(R.layout.activity_juegos)
 
 
-
         btn_contador.setOnClickListener {
 
             val intent5:Intent = Intent (this, instructivo_contador::class.java)
+
             startActivity(intent5)
 
             finish()
@@ -24,7 +24,8 @@ class juegos : AppCompatActivity() {
 
         btn_numSecreto.setOnClickListener {
 
-           val intent6:Intent = Intent (this, instructivo_numerosecreto::class.java)
+            val intent6:Intent = Intent (this, instructivo_numerosecreto::class.java)
+
             startActivity(intent6)
 
             finish()
@@ -34,6 +35,7 @@ class juegos : AppCompatActivity() {
         btn_IraPerfil.setOnClickListener {
 
             val intent13:Intent = Intent (this,datosPersonales::class.java)
+
             startActivity(intent13)
 
             finish()

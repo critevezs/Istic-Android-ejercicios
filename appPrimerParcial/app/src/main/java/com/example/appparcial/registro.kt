@@ -26,21 +26,24 @@ class registro : AppCompatActivity() {
 
                 Toast.makeText(this, "hay campos sin completar ", Toast.LENGTH_LONG).show()
             } else {
+                if (lbl_Registro_Contrasena.text.toString() != lbl_Repetir_Contrasena.text.toString()) {
 
+                    Toast.makeText(this, "las contraseñas son diferentes ", Toast.LENGTH_LONG)
+                        .show()
+                } else {
 
-                registrarUsuario(lbl_Nombre_Usuario.text.toString(),lbl_Registro_Contrasena.text.toString())
+                    registrarUsuario(
+                        lbl_Nombre_Usuario.text.toString(),
+                        lbl_Registro_Contrasena.text.toString()
+                    )
 
-                val intent_17: Intent = Intent(this, Registro_Ok::class.java)
-                startActivity(intent_17)
+                    val intent_17: Intent = Intent(this, Registro_Ok::class.java)
+                    startActivity(intent_17)
 
-
-                finish()
-
+                    finish()
+                }
             }
         }
-
-
-
     }
 
 
@@ -56,5 +59,4 @@ class registro : AppCompatActivity() {
 
         }
     }
-
 }

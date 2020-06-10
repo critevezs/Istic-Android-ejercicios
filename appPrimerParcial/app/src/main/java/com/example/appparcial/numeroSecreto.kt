@@ -4,8 +4,10 @@ import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
+
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 import kotlinx.android.synthetic.main.activity_numero_secreto.*
 import java.io.IOException
@@ -14,20 +16,12 @@ import java.io.OutputStreamWriter
 class numeroSecreto : AppCompatActivity() {
 
 
-    val numeroSecreto = (Math.random() *50 ).toInt()
-    var intentos:Int = 0
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_numero_secreto)
 
-        //intento recibir datos
-        //val usuario=intent.getStringExtra("nombre")
-        //textView_usuario.text=usuario
-
+        val numeroSecreto = (Math.random() *50 ).toInt()
+        var intentos:Int = 0
 
 
         btn_volver.setOnClickListener {
@@ -90,8 +84,8 @@ class numeroSecreto : AppCompatActivity() {
 
                             try {
                                 val archivo = OutputStreamWriter(openFileOutput("datos_numero.txt", Activity.MODE_APPEND))
-                                //archivo.write(editText_Obj_Contador.text.toString() + "  " + textView_cuenta.text.toString() + "\n")
-                                archivo.write("Intentos " + intentos.toString() + "\n")
+
+                                archivo.write(   "Intentos: " + " " + intentos.toString() + "\n")
                                 archivo.flush()
                                 archivo.close()
                             } catch (e: IOException) {
@@ -111,18 +105,9 @@ class numeroSecreto : AppCompatActivity() {
                             }
 
                             }
-                        }
+                    }
                 }
-
             }
-
-
-
-
-
-
-
         }
-
     }
 }

@@ -48,14 +48,15 @@
     <property name="settings.editor.selected.configurable" value="diff.base" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\cristian\Desktop\appPrimerParcial\app\src\main\res\mipmap-hdpi" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\cristian\Desktop\appPrimerParcial\app\src\main\res\drawable" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.example.appparcial" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\cristian\Desktop\appPrimerParcial\app\src\main\res\drawable" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cristian\Desktop\appPrimerParcial\app\src\main\res\raw" />
+      <recent name="C:\Users\cristian\Desktop\appPrimerParcial\app\src\main\res\mipmap-hdpi" />
     </key>
   </component>
   <component name="RunDashboard">

@@ -12,6 +12,8 @@ import java.io.InputStreamReader
 
 class MainActivity : AppCompatActivity() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,14 +23,10 @@ class MainActivity : AppCompatActivity() {
             if (editText_Usuario.text.toString().isEmpty() or editText_contraseña.text.toString().isEmpty()){
 
                 Toast.makeText(this, "hay campos sin completar ", Toast.LENGTH_LONG).show()
-            }
+           }
             else {
 
-               loginArchivo(editText_Usuario.text.toString(),editText_contraseña.text.toString() )
-
-
-                //val intent: Intent = Intent(this, datosPersonales::class.java)
-                //startActivity(intent)
+               loginArchivo( )
 
                 finish()
             }
@@ -46,43 +44,61 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun loginArchivo(Usu_log:String , Con_log:String)
-    {
-        if (fileList().contains("registro.txt")) {
-            try {
-                val archivo = InputStreamReader(openFileInput("registro.txt"))
-                val br = BufferedReader(archivo)
-                var linea = br.readLine()
-                while (linea != null) {
+    private fun loginArchivo() {
 
-                    val arrayDatos=linea.split("=>")
-                    if(arrayDatos[0]== Usu_log && arrayDatos[1]==Con_log)
-                    {
-                        val intent: Intent = Intent(this, datosPersonales::class.java)
+            if (fileList().contains("registro.txt")) {
+                try {
 
-                        //intento pasaje datos
-                        //intent.putExtra("nombre",Usu_log.toString())
-                        startActivity(intent)
+                    var bandera: String = "no"
 
+                    val archivo = InputStreamReader(openFileInput("registro.txt"))
+                    val br = BufferedReader(archivo)
+                    var linea = br.readLine()
+                    while (linea != null) {
+
+                        val arrayDatos = linea.split("=>")
+                        if (arrayDatos[0] == editText_Usuario.text.toString() && arrayDatos[1] == editText_contraseña.text.toString()) {
+
+                            bandera = "si"
+                            val Usuario_Logueado = editText_Usuario.text.toString()
+                            val intent: Intent = Intent(this, datosPersonales::class.java)
+
+                            intent.putExtra("nombre", Usuario_Logueado)
+                            startActivity(intent)
+                            break
+
+                        }
+                        /*if(arrayDatos[0] != editText_Usuario.text.toString()){
+                            bandera="no"
+                            Toast.makeText(this, "Usuario incorecto ", Toast.LENGTH_LONG).show()
+                            break
+                        }
+                        else{
+                            if(arrayDatos[1] != editText_contraseña.text.toString()){
+                                bandera="no"
+                                Toast.makeText(this, "contraseña incorecto ", Toast.LENGTH_LONG).show()
+                                break
+                            }
+                        }*/
+
+                        linea = br.readLine()
                     }
-                    //else
-                   //{
-                        //Toast.makeText(this, "Usuario y/o contraseña incorecto ", Toast.LENGTH_LONG).show()
 
+                    if (bandera == "no") {
+                        Toast.makeText(this, "Usuario y/o contraseña incorecto ", Toast.LENGTH_LONG).show()
 
-                  // }
-                    linea = br.readLine()
+                   }
+
+                    br.close()
+                    archivo.close()
+
+                } catch (e: IOException) {
+
+                    Toast.makeText(this, "el Usuario no exite, REGISTRATE ", Toast.LENGTH_LONG).show()
+
                 }
-
-
-                br.close()
-                archivo.close()
-
-            } catch (e: IOException) {
-                Toast.makeText(this, "Usuario y/o contraseña incorecto ", Toast.LENGTH_LONG).show()
             }
-        }
 
+        }
     }
 
-}

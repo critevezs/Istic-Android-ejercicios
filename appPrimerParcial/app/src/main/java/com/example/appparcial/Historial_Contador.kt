@@ -24,7 +24,6 @@ class Historial_Contador : AppCompatActivity() {
 
         CargarListado()
 
-
     }
 
     private fun CargarListado()
@@ -47,7 +46,4 @@ class Historial_Contador : AppCompatActivity() {
         }
 
     }
-
-
-
 }

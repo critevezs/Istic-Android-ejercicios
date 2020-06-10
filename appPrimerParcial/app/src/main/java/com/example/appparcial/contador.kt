@@ -17,10 +17,10 @@ class contador : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contador)
 
-
         btn_volver.setOnClickListener {
 
             val intent_3:Intent = Intent (this, juegos::class.java)
+
             startActivity(intent_3)
 
             finish()
@@ -36,17 +36,19 @@ class contador : AppCompatActivity() {
 
         btn_reset.setOnClickListener {
 
+            cont= 0
+            textView_cuenta.text=" "
+            //val intent_9:Intent = Intent (this, contador::class.java)
+            //startActivity(intent_9)
 
-            val intent_9:Intent = Intent (this, contador::class.java)
-            startActivity(intent_9)
-
-            finish()
+            //finish()
 
         }
 
         btn_historial_contador.setOnClickListener {
 
             val intent_21:Intent = Intent (this,Historial_Contador::class.java)
+
             startActivity(intent_21)
 
             finish()
@@ -66,8 +68,6 @@ class contador : AppCompatActivity() {
             Toast.makeText(this, "Guardando...",Toast.LENGTH_SHORT).show()
 
         }
-
-
 
     }
 }

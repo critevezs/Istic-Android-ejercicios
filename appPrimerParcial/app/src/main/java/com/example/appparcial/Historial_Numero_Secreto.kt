@@ -46,6 +46,4 @@ class Historial_Numero_Secreto : AppCompatActivity() {
         }
 
     }
-
-
 }
