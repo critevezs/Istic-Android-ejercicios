@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contador">
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="117dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#ED2929"
+        android:text="reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toEndOf="@+id/btn_contar"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cuenta" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="308dp"
+        android:layout_height="52dp"
+        android:text="OBJETO A CONTAR"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097" />
+
+    <EditText
+        android:id="@+id/editText_Obj_Contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="ingrese el objeto"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView_cuenta"
+        android:layout_width="119dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="50dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Obj_Contador" />
+
+    <Button
+        android:id="@+id/btn_contar"
+        android:layout_width="117dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#31D138"
+        android:text="contar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cuenta" />
+
+    <Button
+        android:id="@+id/btn_volver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:text="volver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_contar" />
+
+    <Button
+        android:id="@+id/btn_historial_contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="Historial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toEndOf="@+id/btn_volver"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reset" />
+
+    <Button
+        android:id="@+id/btn_Guardar_Contador"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="27dp"
+        android:backgroundTint="#FFEB3B"
+        android:text="GUARDAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reset" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun loginArchivo() {
 
-            if (fileList().contains("registro.txt")) {
+             (fileList().contains("registro.txt"))
                 try {
 
                     var bandera: String = "no"
@@ -99,6 +99,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-        }
+
     }
 
