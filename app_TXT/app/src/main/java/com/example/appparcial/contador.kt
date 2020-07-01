@@ -59,7 +59,7 @@ class contador : AppCompatActivity() {
 
             try {
                 val archivo = OutputStreamWriter(openFileOutput("datos.txt", Activity.MODE_APPEND))
-                archivo.write(editText_Obj_Contador.text.toString()  +"  " + textView_cuenta.text.toString() + "\n")
+                archivo.write("OBJETO: "+ " "+ editText_Obj_Contador.text.toString()  +"  " + " CANTIDAD: "+ " " + textView_cuenta.text.toString() + "\n"+" -----------------------------------"+ "\n")
                 archivo.flush()
                 archivo.close()
             } catch (e: IOException) {

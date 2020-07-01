@@ -38,10 +38,10 @@ class registro : AppCompatActivity() {
                     )*/
                     altaDeUsuario()
 
-                    val intent_17: Intent = Intent(this, Registro_Ok::class.java)
-                    startActivity(intent_17)
+                    //val intent_17: Intent = Intent(this, Registro_Ok::class.java)
+                    //startActivity(intent_17)
 
-                    finish()
+                    //finish()
                 }
             }
         }
@@ -58,6 +58,13 @@ class registro : AppCompatActivity() {
             var clave=this.lbl_Registro_Contrasena.getText().toString()
             val miUsuario= usuario(nombre,clave)
             retorno=miUsuario.GuardarEnSqLite(this)
+
+            val intent_17: Intent = Intent(this, Registro_Ok::class.java)
+
+
+            startActivity(intent_17)
+
+            finish()
 
 
             /*

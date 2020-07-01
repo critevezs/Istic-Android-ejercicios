@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
                 loginArchivo()
 
-                finish()
+               // finish()
             }
 
         }
@@ -44,9 +44,18 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        btn_sin_registro.setOnClickListener {
+
+            val intent: Intent = Intent(this, datosPersonales::class.java)
+            startActivity(intent)
+
+            finish()
+        }
+
     }
 
     private fun loginArchivo() {
+
 
             (fileList().contains("registro.txt"))
             try {
@@ -59,6 +68,8 @@ class MainActivity : AppCompatActivity() {
                 while (linea != null) {
 
                     val arrayDatos = linea.split("=>")
+
+
                     if (arrayDatos[0] == editText_Usuario.text.toString() && arrayDatos[1] == editText_contraseña.text.toString()) {
 
                         bandera = "si"
@@ -67,9 +78,11 @@ class MainActivity : AppCompatActivity() {
 
                         intent.putExtra("nombre", Usuario_Logueado)
                         startActivity(intent)
-                        break
 
+                        //break
+                        finish()
                     }
+
                     /*if(arrayDatos[0] != editText_Usuario.text.toString()){
                             bandera="no"
                             Toast.makeText(this, "Usuario incorecto ", Toast.LENGTH_LONG).show()
@@ -95,9 +108,12 @@ class MainActivity : AppCompatActivity() {
                 br.close()
                 archivo.close()
 
-            } catch (e: IOException) {
 
-                Toast.makeText(this, "el Usuario no exite, REGISTRATE ", Toast.LENGTH_LONG).show()
+            } //catch (e: Throwable){
+                //Toast.makeText(this, "Error "+ e.message, Toast.LENGTH_SHORT).show()
+
+                catch (e: IOException){
+                    Toast.makeText(this, " Debes Registrarte ", Toast.LENGTH_SHORT).show()
 
             }
 

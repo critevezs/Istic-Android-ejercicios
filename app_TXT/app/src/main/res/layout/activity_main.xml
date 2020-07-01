@@ -55,19 +55,20 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/editText_Usuario"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <EditText
         android:id="@+id/editText_Usuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
+        android:layout_width="251dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="ingrese nombre de uuario"
+        android:hint="ingrese nombre de usuario"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -103,6 +104,7 @@
         android:layout_height="41dp"
         android:layout_marginTop="28dp"
         android:text="no estas registrado"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,5 +122,16 @@
         app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+    <Button
+        android:id="@+id/btn_sin_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="sin registro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.337"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_loguearse" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

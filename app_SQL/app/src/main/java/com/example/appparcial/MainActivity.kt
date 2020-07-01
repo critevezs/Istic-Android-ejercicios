@@ -5,82 +5,119 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.IOException
 
 
 class MainActivity : AppCompatActivity() {
 
-    /*var et1: EditText
-    var et2:EditText
-    private val fila: Cursor? = null*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //et1= (EditText) findViewById(R.id.editText_Usuario)
-        //et2= (EditText) findViewById(R.id.editText_contraseña)
-
         btn_loguearse.setOnClickListener {
 
-            if (editText_Usuario.text.toString().isEmpty() or editText_contrasena.text.toString().isEmpty()){
+            if (editText_Usuario.text.toString().isEmpty() or editText_contrasena.text.toString()
+                    .isEmpty()
+            ) {
 
                 Toast.makeText(this, "hay campos sin completar ", Toast.LENGTH_LONG).show()
-           }
-            else {
-
+            } else {
 
                 login_exitoso()
 
-               //login_exitoso(editText_Usuario.text.toString(),editText_contraseña.text.toString())
-
-                finish()
+                // finish()
             }
 
         }
 
         btn_registrate_del_Login.setOnClickListener {
 
-            val intent_20:Intent = Intent (this,registro::class.java)
+            val intent_20: Intent = Intent(this, registro::class.java)
             startActivity(intent_20)
 
             finish()
-
         }
 
+        btn_sin_registro.setOnClickListener {
+
+            val intent: Intent = Intent(this, datosPersonales::class.java)
+            startActivity(intent)
+
+        }
     }
 
     private fun login_exitoso() {
 
-        val admin = Admin_Base_de_Datos(this, "SqLite2020", null, 2)
-        val bd = admin.writableDatabase
 
-        val usuario: String = editText_Usuario.getText().toString()
-        val contrasena: String = editText_contrasena.getText().toString()
 
-        val fila = bd.rawQuery(
-            "select nombre,clave from usuarios where nombre='" + usuario + "' and clave='" + contrasena + "'",
-            null
-        )
+        try {
 
-        if (fila.moveToFirst() == true) {
+            var bandera:String = "no"
 
-            val usua = fila.getString(0)
-            val pass = fila.getString(1)
+            val admin = Admin_Base_de_Datos(this, "SqLite2020", null, 2)
+            val bd = admin.writableDatabase
 
-            if (usuario.equals(usua) && contrasena.equals(pass)) {
+            val usuario: String = editText_Usuario.getText().toString()
+            val contrasena: String = editText_contrasena.getText().toString()
 
-                val intent: Intent = Intent(this, datosPersonales::class.java)
-                startActivity(intent)
-            } else {
-                if ((usuario != usua && contrasena != pass)) {
+            val fila = bd.rawQuery(
+                "select nombre,clave from usuarios where nombre='" + usuario + "' and clave='" + contrasena + "'",
+                null)
 
-                    Toast.makeText(this, "usuario y o contraseña incorrecto", Toast.LENGTH_SHORT)
-                        .show()
+            if (fila.moveToFirst() == true) {
+
+                val usua = fila.getString(0)
+                val pass = fila.getString(1)
+
+                if (usuario.equals(usua) && contrasena.equals(pass)) {
+
+                    bandera = "si"
+
+
+                    val Usuario_Logueado = editText_Usuario.text.toString()
+
+                    val intent: Intent = Intent(this, datosPersonales::class.java)
+                    intent.putExtra("nombre", Usuario_Logueado)
+                    startActivity(intent)
+
+                    finish()
+
                 }
+
+
+                   /* if (!(usuario.equals(usua) && contrasena.equals(pass))) {
+
+                        Toast.makeText(
+                            this,
+                            "usuario y o contraseña incorrecto",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }*/
+
+                    if (bandera == "no") {
+                        Toast.makeText(
+                            this,
+                            "usuario y o contraseña incorrecto",
+                            Toast.LENGTH_SHORT
+                        )
+                            .show()
+                    }
+
+
+
+            }
+
+        }catch(e: IOException)
+            {
+                Toast.makeText(this, "debes registrarte", Toast.LENGTH_SHORT).show()
             }
 
         }
+
+
     }
+
 
     //me tilda el cel cuando intento logiarme
    /* private fun login_exitoso(usu:String, con:String) {
@@ -240,6 +277,4 @@ class MainActivity : AppCompatActivity() {
                 }
             }*/
 
-
-    }
 

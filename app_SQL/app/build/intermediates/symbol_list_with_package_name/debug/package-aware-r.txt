@@ -773,8 +773,10 @@ id btn_registrate_del_Login
 id btn_reintentar
 id btn_rendirse
 id btn_reset
+id btn_sin_registro
 id btn_verificar
 id btn_volver
+id btn_volver_al_login
 id btn_volver_historial_contador
 id buttonPanel
 id center_vertical
@@ -939,7 +941,6 @@ id textView9
 id textView_cuenta
 id textView_intentos
 id textView_random
-id textView_usuario
 id text_Apellido
 id text_Legajo
 id text_Nombre

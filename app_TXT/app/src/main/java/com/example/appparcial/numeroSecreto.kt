@@ -85,7 +85,7 @@ class numeroSecreto : AppCompatActivity() {
                             try {
                                 val archivo = OutputStreamWriter(openFileOutput("datos_numero.txt", Activity.MODE_APPEND))
 
-                                archivo.write(   "Intentos: " + " " + intentos.toString() + "\n")
+                                archivo.write(   "Cantidadd de Intentos: " + " " + intentos.toString() + "\n"+ "-------------------------------------" + "\n")
                                 archivo.flush()
                                 archivo.close()
                             } catch (e: IOException) {

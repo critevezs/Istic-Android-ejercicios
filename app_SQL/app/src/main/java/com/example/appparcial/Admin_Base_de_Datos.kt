@@ -11,7 +11,7 @@ class Admin_Base_de_Datos(context: Context, name: String, factory: SQLiteDatabas
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("create table usuarios(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre text, clave text)")
-        db.execSQL("create table Jugadas(id INTEGER PRIMARY KEY AUTOINCREMENT, descripcion text,jugador text,fecha text)")
+        db.execSQL("create table Jugadas(id INTEGER PRIMARY KEY AUTOINCREMENT, descripcion text,cantidad text,jugador text,fecha text)")
         /*
         * INSERT INTO datetime_text (d1, d2) VALUES(datetime('now'),datetime('now', 'localtime'));
         */

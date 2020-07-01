@@ -1,5 +1,6 @@
 package com.example.appparcial
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -11,6 +12,15 @@ class Listado_Usuarios : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listado__usuarios)
+
+
+        btn_volver_al_login.setOnClickListener {
+
+            val intent_35: Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent_35)
+
+            finish()
+        }
 
         listarUsuarios()
 
